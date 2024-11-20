@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>NeutralinoJs sample app</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body class="bg-neutral-950 text-white  h-screen w-screen">
+  <div id="neutralinoapp">
+    <div class="w-full p-4"><span class="text-xl">JSON Schema builder</span><p>Use this tool to create common schema that can be used across applications, cli scripts, python, html forms etc.</p></div>
+    <div class="w-screen flex space-x-2  min-h-fit  bg-neutral-950 p-4 ">
+      <!-- Tools View -->
+      <div class="w-fit p-4 basis-1/3 bg-neutral-800 rounded-lg shadow-lg border-solid border-neutral-500   border ">
+        <h2 class="font-bold p-2">Tools</h2>
+        <div id="addFieldForm" class="space-y-2 flex flex-col ">
+          <!-- Inputs for adding fields will go here -->
+          <!-- Placeholder for additional tool buttons -->
+        </div>
+      </div>
+      <!-- Preview View -->
+      <div class="w-fit  basis-1/3 bg-neutral-800 rounded-lg shadow-lg border-solid border-neutral-500 p-4 border">
+        <h2 class="font-bold  ">Preview</h2>
+        <div id="formPreview"></div>
+      </div>
+      <!-- Output View -->
+      <div
+        class="w-fit basis-1/3 p-4 bg-neutral-700 rounded-lg border-solid border-neutral-500 space-x-2 border  shadow-xl">
+        <h2 class="font-bold mb-4">JSON Schema Output</h2>
+        <pre id="jsonPreview" class="text-left align-self-start"></pre>
+      </div>
+    </div>
+    <div class="w-full p-4 flex flex-row flex-nowrap space-x-2">
+      <span class="w-screen inline-block basis-full p-4 bg-neutral-800 border border-solid border-neutral-500">Export as</span>
+      <div class="w-full basis-full p-4 bg-neutral-800 border border-solid border-neutral-500">
+        <button id="toHtml" class="p-2 bg-neutral-300 text-black hover:underline">HTML form</button>
+        <button id="toPython" class="p-2 bg-neutral-300 text-black hover:underline">CLI script python </button>
+        <button id="toBash" class="p-2 bg-neutral-300 text-black hover:underline">CLI script bash </button>
+      </div>
+    </div>
+    <script src="./js/neutralino.js"></script>
+    <!-- Your app's source files -->
+    <script src="./js/main.js" type="module"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+
+</html>
